@@ -74,6 +74,36 @@ namespace School_Management
             this.textBox1.TabIndex = 4;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(46, 211);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(125, 16);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "STUDENT ID         :";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(46, 267);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(125, 16);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "NAME                   :";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label4.Location = new System.Drawing.Point(46, 321);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(127, 16);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "AGE                      :";
+            // 
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -82,6 +112,15 @@ namespace School_Management
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(208, 28);
             this.textBox2.TabIndex = 14;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.textBox3.Location = new System.Drawing.Point(200, 318);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(208, 28);
+            this.textBox3.TabIndex = 15;
             // 
             // dataGridView1
             // 
