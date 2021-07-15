@@ -12,14 +12,11 @@ C:\Users\sajan\source\repos\School\School Management\bin\Debug\School Management
 C:\Users\sajan\source\repos\School\School Management\bin\Debug\School Management.exe
 C:\Users\sajan\source\repos\School\School Management\bin\Debug\School Management.pdb
 C:\Users\sajan\source\repos\School\School Management\obj\Debug\School Management.csproj.AssemblyReference.cache
-C:\Users\sajan\source\repos\School\School Management\obj\Debug\School_Management.Form1.resources
 C:\Users\sajan\source\repos\School\School Management\obj\Debug\School_Management.Properties.Resources.resources
 C:\Users\sajan\source\repos\School\School Management\obj\Debug\School Management.csproj.GenerateResource.cache
 C:\Users\sajan\source\repos\School\School Management\obj\Debug\School Management.csproj.CoreCompileInputs.cache
 C:\Users\sajan\source\repos\School\School Management\obj\Debug\School Management.exe
 C:\Users\sajan\source\repos\School\School Management\obj\Debug\School Management.pdb
-C:\Users\sajan\source\repos\School\School Management\obj\Debug\School_Management.Form2.resources
-C:\Users\sajan\source\repos\School\School Management\obj\Debug\School_Management.Form3.resources
 C:\Users\ROG\Source\Repos\School\School Management\bin\Debug\School Management.exe.config
 C:\Users\ROG\Source\Repos\School\School Management\bin\Debug\School Management.exe
 C:\Users\ROG\Source\Repos\School\School Management\bin\Debug\School Management.pdb
@@ -29,9 +26,6 @@ C:\Users\ROG\Source\Repos\School\School Management\obj\Debug\School Management.c
 C:\Users\ROG\Source\Repos\School\School Management\obj\Debug\School Management.csproj.CoreCompileInputs.cache
 C:\Users\ROG\Source\Repos\School\School Management\obj\Debug\School Management.exe
 C:\Users\ROG\Source\Repos\School\School Management\obj\Debug\School Management.pdb
-C:\Users\sajan\source\repos\School\School Management\obj\Debug\School_Management.Form4.resources
-C:\Users\sajan\source\repos\School\School Management\obj\Debug\School_Management.Form5.resources
-C:\Users\sajan\source\repos\School\School Management\obj\Debug\School_Management.Form6.resources
 C:\Users\romal\source\repos\School\School Management\bin\Debug\School Management.exe.config
 C:\Users\romal\source\repos\School\School Management\bin\Debug\School Management.exe
 C:\Users\romal\source\repos\School\School Management\bin\Debug\School Management.pdb
@@ -68,3 +62,9 @@ C:\Users\ROG\source\repos\School\School Management\obj\Debug\School_Management.M
 C:\Users\ROG\source\repos\School\School Management\obj\Debug\School_Management.ManageClass.resources
 C:\Users\ROG\source\repos\School\School Management\obj\Debug\School_Management.ManageStaff.resources
 C:\Users\ROG\source\repos\School\School Management\obj\Debug\School_Management.ManageSubjects.resources
+C:\Users\sajan\source\repos\School\School Management\obj\Debug\School_Management.Login.resources
+C:\Users\sajan\source\repos\School\School Management\obj\Debug\School_Management.HomePage.resources
+C:\Users\sajan\source\repos\School\School Management\obj\Debug\School_Management.ManageStudents.resources
+C:\Users\sajan\source\repos\School\School Management\obj\Debug\School_Management.ManageClass.resources
+C:\Users\sajan\source\repos\School\School Management\obj\Debug\School_Management.ManageStaff.resources
+C:\Users\sajan\source\repos\School\School Management\obj\Debug\School_Management.ManageSubjects.resources
