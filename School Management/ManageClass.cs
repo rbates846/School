@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace School_Management
@@ -49,6 +44,60 @@ namespace School_Management
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (IsValid())
+            {
+                SqlCommand cmd = new SqlCommand("Insert into tbl_classRoom values (@RoomNo, @Capacity, @Building, @SectionNo)", con);
+                cmd.CommandType = CommandType.Text;
+                cmd.Parameters.AddWithValue("@RoomNo", textBox1.Text);
+                cmd.Parameters.AddWithValue("@Capacity", numericUpDown1.Value);
+                cmd.Parameters.AddWithValue("@Building", textBox3.Text);
+                cmd.Parameters.AddWithValue("@SectionNo", textBox4.Text);
+
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+
+                MessageBox.Show("New Class Room Successfully Inserted", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                GetClassRecord();
+            } 
+            
+            
+        }
+
+        private bool IsValid()
+        {
+            if (textBox1.Text == string.Empty)
+            {
+                MessageBox.Show("Room Number is Required", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            return true;
+        }
+
+        private void ManageClass_Load(object sender, EventArgs e)
+        {
+            GetClassRecord();
+        }
+        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-UDVU5DR\SQLEXPRESS01;Initial Catalog=SchoolManagement;Integrated Security=True");
+
+        private void GetClassRecord()
+        {
+            SqlCommand cmd = new SqlCommand("Select * from tbl_classRoom", con);
+            DataTable dt = new DataTable();
+
+            con.Open();
+
+            SqlDataReader sdr = cmd.ExecuteReader();
+            dt.Load(sdr);
+            con.Close();
+
+            dataGridView1.DataSource = dt;
 
         }
     }
