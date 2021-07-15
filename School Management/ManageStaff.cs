@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data.SqlClient;
 using System.Windows.Forms;
+
 
 namespace School_Management
 {
@@ -29,7 +25,23 @@ namespace School_Management
 
         private void ManageStaff_Load(object sender, EventArgs e)
         {
+            GetStaffRecord();
+        }
 
+        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-2791U4J\SQLEXPRESS;Initial Catalog=SchoolManagement;Integrated Security=True");
+
+        private void GetStaffRecord()
+        {
+            SqlCommand cmd = new SqlCommand("Select * from tbl_staff", con);
+            DataTable dt = new DataTable();
+
+            con.Open();
+
+            SqlDataReader sdr = cmd.ExecuteReader();
+            dt.Load(sdr);
+            con.Close();
+
+            dataGridView1.DataSource = dt;
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -39,7 +51,35 @@ namespace School_Management
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (IsValid())
+            {
+                SqlCommand cmd = new SqlCommand("Insert into tbl_student values (@Name, @Subject, @Class)", con);
+                cmd.CommandType = CommandType.Text;
+                cmd.Parameters.AddWithValue("@Name", textBox4.Text);
+                cmd.Parameters.AddWithValue("@Name", comboBox2.Text);
+                cmd.Parameters.AddWithValue("@Name", comboBox1.Text);
 
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+
+                MessageBox.Show("New Staff Member Successfully Inserted", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                GetStaffRecord();
+
+
+            }
+        }
+
+        private bool IsValid()
+        {
+            if (textBox4.Text == string.Empty)
+            {
+                MessageBox.Show("Name is Required", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            return true;
         }
     }
 }
