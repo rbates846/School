@@ -99,9 +99,9 @@ namespace School_Management
             this.label4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
             this.label4.Location = new System.Drawing.Point(46, 321);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(126, 16);
+            this.label4.Size = new System.Drawing.Size(127, 16);
             this.label4.TabIndex = 7;
-            this.label4.Text = "DATE OF BIRTH    :";
+            this.label4.Text = "AGE                      :";
             // 
             // textBox2
             // 
@@ -115,7 +115,7 @@ namespace School_Management
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
-            this.textBox3.Location = new System.Drawing.Point(200, 321);
+            this.textBox3.Location = new System.Drawing.Point(200, 318);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(208, 28);
