@@ -53,11 +53,11 @@ namespace School_Management
         {
             if (IsValid())
             {
-                SqlCommand cmd = new SqlCommand("Insert into tbl_student values (@Name, @Subject, @Class)", con);
+                SqlCommand cmd = new SqlCommand("Insert into tbl_staff values (@Name, @Subject, @Class)", con);
                 cmd.CommandType = CommandType.Text;
                 cmd.Parameters.AddWithValue("@Name", textBox4.Text);
-                cmd.Parameters.AddWithValue("@Name", comboBox2.Text);
-                cmd.Parameters.AddWithValue("@Name", comboBox1.Text);
+                cmd.Parameters.AddWithValue("@Subject", comboBox2.Text);
+                cmd.Parameters.AddWithValue("@Class", comboBox1.Text);
 
                 con.Open();
                 cmd.ExecuteNonQuery();
