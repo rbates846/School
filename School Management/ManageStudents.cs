@@ -46,5 +46,10 @@ namespace School_Management
         {
 
         }
+
+        private void label5_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

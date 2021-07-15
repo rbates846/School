@@ -12,8 +12,6 @@ namespace School_Management
 {
     public partial class Login : Form
     {
-
-       
         public Login()
         {
             InitializeComponent();
@@ -52,11 +50,6 @@ namespace School_Management
         private void label4_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void pictureBox7_Click(object sender, EventArgs e)
-        {
-            
         }
     }
 }
