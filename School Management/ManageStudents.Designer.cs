@@ -113,15 +113,7 @@ namespace School_Management
             this.textBox2.Size = new System.Drawing.Size(208, 28);
             this.textBox2.TabIndex = 14;
             // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
-            this.textBox3.Location = new System.Drawing.Point(200, 318);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(208, 28);
-            this.textBox3.TabIndex = 15;
-            // 
+            
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;

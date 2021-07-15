@@ -36,5 +36,15 @@ namespace School_Management
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ManageSubjects_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
