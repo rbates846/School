@@ -149,6 +149,7 @@ namespace School_Management
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(333, 196);
             this.dataGridView1.TabIndex = 35;
+            
             // 
             // Delete
             // 
