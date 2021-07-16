@@ -162,9 +162,9 @@ namespace School_Management
         {
             if (StudentId > 0)
             {
-                if (MessageBox.Show("Are you sure to delete?", "Delete Record", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (MessageBox.Show("Are you sure want to delete?", "Delete Record", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    SqlCommand cmd = new SqlCommand("DELETE FROm tbl_student WHERE StudentId = @StudentId", con);
+                    SqlCommand cmd = new SqlCommand("DELETE From tbl_student WHERE StudentId = @StudentId", con);
                     cmd.CommandType = CommandType.Text;
 
                     cmd.Parameters.AddWithValue("@StudentId", this.StudentId);

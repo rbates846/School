@@ -70,7 +70,7 @@ namespace School_Management
             GetSubjectRecord();
         }
 
-        SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-G2918RTQ\SQLEXPRESS;Initial Catalog=SchoolManagement;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-UDVU5DR\SQLEXPRESS01;Initial Catalog=SchoolManagement;Integrated Security=True");
 
         private void GetSubjectRecord()
         {
