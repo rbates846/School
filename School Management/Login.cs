@@ -31,7 +31,7 @@ namespace School_Management
         {
             if (ValidateChildren(ValidationConstraints.Enabled))
             {
-                SqlConnection sqlcon = new SqlConnection(@"Data Source=DESKTOP-2791U4J\SQLEXPRESS;Initial Catalog=SchoolManagement;Integrated Security=True;");
+                SqlConnection sqlcon = new SqlConnection(@"Data Source=LAPTOP-G2918RTQ\SQLEXPRESS;Initial Catalog=SchoolManagement;Integrated Security=True;");
                 string query = "SELECT * FROM login WHERE username = '" + textBox1.Text.Trim() + "' and password = '" + textBox2.Text.Trim() + "'";
                 SqlDataAdapter sda = new SqlDataAdapter(query, sqlcon);
                 DataTable dtbl = new DataTable();

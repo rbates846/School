@@ -72,7 +72,7 @@ namespace School_Management
             
         }
 
-        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-2791U4J\SQLEXPRESS;Initial Catalog=SchoolManagement;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-G2918RTQ\SQLEXPRESS;Initial Catalog=SchoolManagement;Integrated Security=True");
 
         public int SubId;
         private void GetSubjectRecord()
@@ -171,6 +171,17 @@ namespace School_Management
 
             }
 
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            ///Get the Value from Text Box
+
+            string keyword = textBox1.Text;
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM tbl_subjects WHERE Subject_Code LIKE '%" + keyword + "%' OR Name LIKE '%" + keyword + "%' OR Teacher_Incharge LIKE '%" + keyword + "%'", con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            dataGridView1.DataSource = dt;
         }
     }
 }

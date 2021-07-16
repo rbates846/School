@@ -84,7 +84,7 @@ namespace School_Management
         {
             GetClassRecord();
         }
-        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-2791U4J\SQLEXPRESS;Initial Catalog=SchoolManagement;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-G2918RTQ\SQLEXPRESS;Initial Catalog=SchoolManagement;Integrated Security=True");
 
         private void GetClassRecord()
         {
@@ -99,6 +99,17 @@ namespace School_Management
 
             dataGridView1.DataSource = dt;
 
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+            ///Get the Value from Text Box
+
+            string keyword = textBox5.Text;
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM tbl_classRoom WHERE RoomNo LIKE '%" + keyword + "%' OR Capacity LIKE '%" + keyword + "%' OR Building LIKE '%" + keyword + "%' OR SectionNo LIKE '%" + keyword + "%'", con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            dataGridView1.DataSource = dt;
         }
     }
 }
