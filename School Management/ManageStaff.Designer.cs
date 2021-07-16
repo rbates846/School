@@ -66,7 +66,7 @@ namespace School_Management
             this.label1.Font = new System.Drawing.Font("Sitka Text", 27.75F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(343, 61);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(335, 68);
+            this.label1.Size = new System.Drawing.Size(265, 53);
             this.label1.TabIndex = 21;
             this.label1.Text = "Manage Staff";
             // 
@@ -76,7 +76,7 @@ namespace School_Management
             this.label3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
             this.label3.Location = new System.Drawing.Point(66, 236);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(119, 19);
+            this.label3.Size = new System.Drawing.Size(97, 16);
             this.label3.TabIndex = 23;
             this.label3.Text = "Name            :";
             // 
@@ -86,7 +86,7 @@ namespace School_Management
             this.label4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
             this.label4.Location = new System.Drawing.Point(66, 286);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(134, 19);
+            this.label4.Size = new System.Drawing.Size(108, 16);
             this.label4.TabIndex = 24;
             this.label4.Text = "Subject         :   ";
             // 
@@ -96,7 +96,7 @@ namespace School_Management
             this.label5.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
             this.label5.Location = new System.Drawing.Point(66, 335);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(133, 19);
+            this.label5.Size = new System.Drawing.Size(105, 16);
             this.label5.TabIndex = 25;
             this.label5.Text = "Class             :  ";
             // 
@@ -117,7 +117,6 @@ namespace School_Management
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(333, 196);
             this.dataGridView1.TabIndex = 35;
-            
             // 
             // Delete
             // 
@@ -157,6 +156,7 @@ namespace School_Management
             this.button2.TabIndex = 37;
             this.button2.Text = "Clear";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -196,7 +196,7 @@ namespace School_Management
             this.label6.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(787, 81);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(70, 22);
+            this.label6.Size = new System.Drawing.Size(55, 17);
             this.label6.TabIndex = 45;
             this.label6.Text = "Search";
             this.label6.Click += new System.EventHandler(this.label6_Click);
@@ -217,7 +217,7 @@ namespace School_Management
             this.textBox1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(825, 101);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(147, 30);
+            this.textBox1.Size = new System.Drawing.Size(147, 26);
             this.textBox1.TabIndex = 43;
             // 
             // comboBox1
@@ -226,7 +226,7 @@ namespace School_Management
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(200, 332);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(208, 32);
+            this.comboBox1.Size = new System.Drawing.Size(208, 27);
             this.comboBox1.TabIndex = 46;
             // 
             // comboBox2
@@ -235,7 +235,7 @@ namespace School_Management
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(200, 279);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(208, 32);
+            this.comboBox2.Size = new System.Drawing.Size(208, 27);
             this.comboBox2.TabIndex = 47;
             // 
             // ManageStaff
