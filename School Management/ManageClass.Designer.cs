@@ -178,6 +178,7 @@ namespace School_Management
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(460, 201);
             this.dataGridView1.TabIndex = 18;
+            this.dataGridView1.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_RowHeaderMouseClick);
             // 
             // panel1
             // 

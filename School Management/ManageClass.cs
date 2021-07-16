@@ -111,5 +111,10 @@ namespace School_Management
             sda.Fill(dt);
             dataGridView1.DataSource = dt;
         }
+
+        private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+
+        }
     }
 }
