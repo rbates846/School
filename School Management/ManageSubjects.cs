@@ -10,9 +10,35 @@ namespace School_Management
         public ManageSubjects()
         {
             InitializeComponent();
+            FillCombo();
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        void FillCombo()
+        {
+            string sql = "Select * from tbl_staff";
+            SqlCommand cmd = new SqlCommand(sql, con);
+            SqlDataReader myreader;
+            try
+            {
+                con.Open();
+                myreader = cmd.ExecuteReader();
+                while (myreader.Read())
+                {
+                    string Name = myreader.GetString(1);
+                    comboBox1.Items.Add(Name);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+            private void label3_Click(object sender, EventArgs e)
         {
 
         }

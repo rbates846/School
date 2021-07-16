@@ -145,8 +145,8 @@ namespace School_Management
         private void ResetFormControls()
         {
             textBox4.Clear();
-            comboBox2.ResetText();
-            comboBox1.ResetText();
+            comboBox2.Text = string.Empty;
+            comboBox1.Text = string.Empty;
 
             textBox4.Focus();
         }
