@@ -64,6 +64,7 @@ namespace School_Management
 
                 MessageBox.Show("New Class Room Successfully Inserted", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 GetClassRecord();
+                ResetFormControls();
             } 
             
             
@@ -85,6 +86,8 @@ namespace School_Management
             GetClassRecord();
         }
         SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-G2918RTQ\SQLEXPRESS;Initial Catalog=SchoolManagement;Integrated Security=True");
+
+        public int RoomId;
 
         private void GetClassRecord()
         {
@@ -115,6 +118,77 @@ namespace School_Management
         private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ResetFormControls();
+        }
+
+        private void ResetFormControls()
+        {
+            textBox1.Clear();
+            numericUpDown1.Value = 0;
+            textBox3.Clear();
+            textBox4.Clear();
+        }
+
+        private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            RoomId = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value);
+            textBox1.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+            numericUpDown1.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
+            textBox3.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
+            textBox4.Text = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (RoomId > 0)
+            {
+                SqlCommand cmd = new SqlCommand("UPDATE tbl_classRoom SET RoomNo = @RoomNo, Capacity =  @Capacity, Building =  @Building, SectionNo =  @SectionNo WHERE RoomId = @RoomId", con);
+                cmd.CommandType = CommandType.Text;
+                cmd.Parameters.AddWithValue("@RoomNo", textBox1.Text);
+                cmd.Parameters.AddWithValue("@Capacity", numericUpDown1.Value);
+                cmd.Parameters.AddWithValue("@Building", textBox3.Text);
+                cmd.Parameters.AddWithValue("@SectionNo", textBox4.Text);
+                cmd.Parameters.AddWithValue("@RoomId", this.RoomId);
+
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+
+                MessageBox.Show(" Class Room Information is  Updated Successfully ", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                GetClassRecord();
+                ResetFormControls();
+            }
+            else
+            {
+                MessageBox.Show(" Please Select a Room Informations to Open ", "Select?", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void Delete_Click(object sender, EventArgs e)
+        {
+            if (RoomId > 0)
+            {
+                SqlCommand cmd = new SqlCommand("DELETE from tbl_classRoom WHERE RoomId = @RoomId", con);
+                cmd.CommandType = CommandType.Text;
+                
+                cmd.Parameters.AddWithValue("@RoomId", this.RoomId);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+
+                MessageBox.Show(" Class Room Information is  Deleted from the system ", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                GetClassRecord();
+                ResetFormControls();
+            }
+            else
+            {
+                MessageBox.Show(" Please Select a Room Informations to Delete ", "Select?", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
