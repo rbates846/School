@@ -52,7 +52,7 @@ namespace School_Management
             GetStudentsRecord();
         }
 
-        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-UDVU5DR\SQLEXPRESS01;Initial Catalog=SchoolManagement;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-2791U4J\SQLEXPRESS;Initial Catalog=SchoolManagement;Integrated Security=True");
 
         public int StudentId;
 
